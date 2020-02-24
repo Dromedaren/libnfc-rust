@@ -10,7 +10,13 @@ fn main() -> Result<(), Error> {
 
     println!("Device name: {}", device.name());
     println!("Device connection string: {}", device.connstring());
-    println!("Device information:\n {:?}", device.information()?);
+
+    println!("Device information: ");
+    for device_information in device.information().unwrap().to_str().unwrap().split('\n') {
+        println!("{}", device_information);
+    }
+
+    //println!("Device information:\n {:?}", device.information()?);
     let modulation = Modulation::new(ModulationType::NmtIso14443A, BaudRate::Nbr106);
 
     println!("Modulation set to: {:?}", modulation.str_modulation_type());
