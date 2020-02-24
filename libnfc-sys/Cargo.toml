@@ -1,0 +1,18 @@
+[package]
+name = "libnfc-sys"
+description = "Low-Level bindings to the libnfc C API"
+version = "0.1.0"
+keywords = ["nfc", "smartcard"]
+categories = ["hardware-support", "external-ffi-bindings"]
+authors = ["Ellie Lilja <elililjaa@gmail.com>"]
+edition = "2018"
+links = "libnfc"
+build = "build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2.66"
+
+[build-dependencies]
+pkg-config = "0.3.9"
