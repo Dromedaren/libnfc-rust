@@ -1,2 +1,2 @@
 [workspace]
-members = ["libnfc", "libnfc-sys"]
+members = ["libnfc", "libnfc-sys", "nfc-test"]
